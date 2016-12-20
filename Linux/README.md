@@ -1,6 +1,9 @@
 # Setting up PostGIS
 
-The current setup is for [Fedora Linux 25](https://fedoraproject.org/).
+The current setup is for [Fedora Linux 25](https://fedoraproject.org/). It should work on other distros with the following dependencies:
+
+1. You need PostgreSQL and PostGIS. You do *not* need any header files.
+2. On Debian / Ubuntu installing PostgreSQL creates a database data area and enables / starts the service. On Fedora, you need to do these things after the install.
 
 Note that with PostgreSQL on Linux, there are two sets of users, Linux users and PostgreSQL database users, often called 'roles' in PostgreSQL jargon. For most desktop installations, things are easier if they are mapped one-to-one. That is, the PostgreSQL role 'znmeb' is the same person as the Linux user 'znmeb'.
 
