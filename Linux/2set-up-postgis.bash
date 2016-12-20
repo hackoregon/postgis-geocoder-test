@@ -15,7 +15,7 @@ done
 
 # drop and re-create the user
 sudo su - postgres -c "dropuser ${PGUSER}"
-sudo su - postgres -c "createuser -d ${PGUSER}"
+sudo su - postgres -c "createuser -s ${PGUSER}"
 
 # create databases for the user
 for i in \
@@ -30,4 +30,4 @@ done
 sudo ${HERE}/create-tiger-schema.bash geocoder
 
 echo "Create a password for the PostgreSQL user '${PGUSER}'"
-psql -c '\password'
+psql -c "\\password ${PGUSER}"
