@@ -10,7 +10,7 @@ psql -h localhost -f make-tiger-scripts.psql postgres postgres
 chmod +x /gisdata/*.bash
 
 # edit the scripts
-for i in '/gisdata/state-county.bash' '/gisdata/oregon.bash'
+for i in '/gisdata/nation.bash' '/gisdata/oregon.bash'
 do
   sed -i 's;export PGBIN=.*$;export PGBIN=/usr/bin;' ${i}
   sed -i 's;export PGDATABASE=.*$;export PGDATABASE=postgres;' ${i}
