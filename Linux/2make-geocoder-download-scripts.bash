@@ -14,9 +14,9 @@ for i in '/gisdata/nation.bash' '/gisdata/oregon.bash'
 do
   sed -i 's;export PGBIN=.*$;export PGBIN=/usr/bin;' ${i}
   sed -i 's;export PGDATABASE=.*$;export PGDATABASE=postgres;' ${i}
-  sed -i 's;export PGHOST=localhost;#export PGHOST=localhost;' ${i}
+  sed -i 's;export PGPASSWORD;#export PGPASSWORD;' ${i}
+  sed -i 's;export PGHOST;#export PGHOST;' ${i}
 done
-
 
 # change owner to 'postgres' - the generated scripts have to run as 'postgres'
 sudo chown -R postgres:postgres /gisdata
