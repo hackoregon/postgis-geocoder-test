@@ -1,5 +1,3 @@
-CREATE EXTENSION adminpack;
-CREATE EXTENSION plpgsql WITH SCHEMA pg_catalog;
 CREATE EXTENSION plpython3u;
 CREATE EXTENSION postgis;
 CREATE EXTENSION postgis_topology;
