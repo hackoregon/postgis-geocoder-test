@@ -6,11 +6,11 @@ The current setup is for [Fedora Linux 25](https://fedoraproject.org/). It shoul
 2. On Debian / Ubuntu installing PostgreSQL creates a database data area and enables / starts the service. On Fedora, you need to do these things after the install.
 3. Your Unix user ID must be mirrored in PostgreSQL and have PostgreSQL superuser privileges. This will be the case in the Hack Oregon virtual machine / Vagrant box.
 
-Note that with PostgreSQL on Linux, there are two sets of users, Linux users and PostgreSQL database users, often called 'roles' in PostgreSQL jargon. For most desktop installations, things are easier if they are mapped one-to-one. That is, the PostgreSQL role 'znmeb' is the same person as the Linux user 'znmeb'.
+Note that with PostgreSQL on Linux, there are two sets of users, Linux users and PostgreSQL database users, often called 'roles' in PostgreSQL jargon. For most desktop installations, things are easier if they are mapped one-to-one. That is, the PostgreSQL role `znmeb` is the same person as the Linux user `znmeb`.
 
-When PostgreSQL is installed and configured, there will be a `postgres` Linux user. And there will be a 'postgres' database role (user) inside the PostgreSQL database. This database user has 'superuser' powers - it can create other users and in general mess with stuff inside PostgreSQL just like 'root' can on a Linux system.
+When PostgreSQL is installed and configured, there will be a `postgres` Linux user. And there will be a `postgres` database role (user) inside the PostgreSQL database. This database user has `superuser` powers - it can create other users and in general mess with stuff inside PostgreSQL just like `root` can on a Linux system.
 
-1. Create "geocoder" database with owner "postgres"
+1. Create `geocoder` database with owner `postgres`
       ```
       ./1create-geocoder-database.bash
       ```
@@ -19,7 +19,7 @@ When PostgreSQL is installed and configured, there will be a `postgres` Linux us
 	```
 	./2make-geocoder-download-scripts.bash
 	```
-	This executes some code in the PostGIS package to create two scripts in `/gisdata`. One script, called 'nation.bash', downloads nationwide state and county shapefiles. The second, called 'oregon.bash', downloads detailed shapefiles for Oregon.
+	This executes some code in the PostGIS package to create two scripts in `/gisdata`. One script, called `nation.bash`, downloads nationwide state and county shapefiles. The second, called `oregon.bash`, downloads detailed shapefiles for Oregon.
 
 	After the scripts are generated, do the following:
 	```
