@@ -26,7 +26,7 @@ When PostgreSQL is installed and configured, there will be a `postgres` Linux us
 	sudo su - postgres
 	cd /gisdata
 	```
-	This puts you into the PostgreSQL _Linux_ maintenance account. The scripts require this 'superuser' privilege to run.
+	This puts you into the PostgreSQL _Linux_ maintenance account. The scripts require this superuser privilege to run.
 
 	Run the scripts.
 	```
