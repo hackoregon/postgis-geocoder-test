@@ -1,0 +1,6 @@
+version: '2.0'
+services:
+    postgis:
+        build: .
+        ports: 
+        - '5432:5432'
