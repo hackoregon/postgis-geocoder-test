@@ -3,4 +3,4 @@ services:
     postgis:
         build: .
         ports: 
-        - '65432:5432'
+        - '5439:5432'
