@@ -15,7 +15,7 @@ RUN apt-get update \
 
 # Copy scripts for geocoder database build to /gisdata
 RUN mkdir -p /gisdata/temp
-COPY 0prefetch.bash /gisdata/
+COPY prefetch.bash /gisdata/
 COPY create-geocoder-database.bash /gisdata/
 COPY extensions.sql /gisdata/
 COPY make-tiger-scripts.psql /gisdata/
