@@ -10,7 +10,7 @@ RUN apt-get update \
   && apt-get clean
 
 # Load scripts for geocoder database build
-RUN mkdir -p /gisdata
+RUN mkdir -p /gisdata/temp
 COPY 1create-geocoder-database.bash /gisdata/
 COPY 2make-geocoder-download-scripts.bash /gisdata/
 COPY extensions.sql /gisdata/
