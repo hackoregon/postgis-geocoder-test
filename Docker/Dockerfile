@@ -14,6 +14,7 @@ RUN apt-get update \
 RUN mkdir -p /gisdata/temp
 COPY 1create-geocoder-database.bash /gisdata/
 COPY 2make-geocoder-download-scripts.bash /gisdata/
+COPY 3prefetch.bash /gisdata/
 COPY extensions.sql /gisdata/
 COPY make-tiger-scripts.psql /gisdata/
 RUN chmod +x /gisdata/*.bash
