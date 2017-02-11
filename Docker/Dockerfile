@@ -1,7 +1,7 @@
 FROM docker.io/postgres:latest
 MAINTAINER M. Edward (Ed) Borasky <znmeb@znmeb.net>
 
-# Install PostGIS
+# Install PostGIS and utilities
 RUN apt-get update \
   && apt-get install -qqy --no-install-recommends \
   postgis \
@@ -11,12 +11,17 @@ RUN apt-get update \
   wget \
   && apt-get clean
 
-# Load scripts for geocoder database build
+# Copy scripts for geocoder database build to /gisdata
 RUN mkdir -p /gisdata/temp
-COPY 1create-geocoder-database.bash /gisdata/
-COPY 2make-geocoder-download-scripts.bash /gisdata/
-COPY 3prefetch.bash /gisdata/
+COPY 0prefetch.bash /gisdata/
+COPY create-geocoder-database.bash /gisdata/
 COPY extensions.sql /gisdata/
 COPY make-tiger-scripts.psql /gisdata/
 RUN chmod +x /gisdata/*.bash
 RUN chown -R postgres:postgres /gisdata/
+
+# Prefetch the shapefiles - no PostgreSQL service needed
+USER postgres
+WORKDIR /gisdata
+RUN ./0prefetch.bash
+RUN ./0prefetch.bash # run twice in case of network glitches
