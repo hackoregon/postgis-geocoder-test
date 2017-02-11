@@ -7,6 +7,8 @@ RUN apt-get update \
   postgresql-9.6-postgis-2.3 \
   postgresql-9.6-postgis-2.3-scripts \
   postgresql-9.6-pgrouting \
+  unzip \
+  wget \
   && apt-get clean
 
 # Load scripts for geocoder database build
