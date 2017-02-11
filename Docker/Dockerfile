@@ -5,6 +5,8 @@ MAINTAINER M. Edward (Ed) Borasky <znmeb@znmeb.net>
 RUN apt-get update \
   && apt-get install -qqy --no-install-recommends \
   postgis \
+  postgresql-9.6-pgrouting \
+  postgresql-9.6-pgrouting-scripts \
   postgresql-9.6-postgis-2.3 \
   postgresql-9.6-postgis-2.3-scripts \
   unzip \
@@ -19,9 +21,3 @@ COPY extensions.sql /gisdata/
 COPY make-tiger-scripts.psql /gisdata/
 RUN chmod +x /gisdata/*.bash
 RUN chown -R postgres:postgres /gisdata/
-
-# Prefetch the shapefiles - no PostgreSQL service needed
-USER postgres
-WORKDIR /gisdata
-RUN ./0prefetch.bash
-RUN ./0prefetch.bash # run twice in case of network glitches
