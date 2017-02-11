@@ -1,5 +1,4 @@
 add runs to Dockerfile
 mount /gisdata on host
-dump database in SQL format
 test building on Windows
 extract test data from grind-and-pave PDF and test
