@@ -1,6 +1,7 @@
 version: '2.0'
 services:
-    postgis:
+    postgis_geocoder:
         build: .
+        image: postgis_geocoder
         ports: 
         - '5439:5432'

@@ -1,152 +1,152 @@
 #! /bin/bash
 
-wget -q http://www2.census.gov/geo/tiger/TIGER2016/STATE/tl_2016_us_state.zip --mirror --reject=html
-wget -q http://www2.census.gov/geo/tiger/TIGER2016/COUNTY/tl_2016_us_county.zip --mirror --reject=html
-wget -q http://www2.census.gov/geo/tiger/TIGER2016/PLACE/tl_2016_41_place.zip --mirror --reject=html
-wget -q http://www2.census.gov/geo/tiger/TIGER2016/COUSUB/tl_2016_41_cousub.zip --mirror --reject=html
-wget -q http://www2.census.gov/geo/tiger/TIGER2016/TRACT/tl_2016_41_tract.zip --mirror --reject=html
-wget -q http://www2.census.gov/geo/tiger/TIGER2016/BG/tl_2016_41_bg.zip --mirror --reject=html
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41001_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41003_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41005_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41007_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41009_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41011_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41013_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41015_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41017_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41019_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41021_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41023_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41025_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41027_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41029_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41031_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41033_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41035_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41037_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41039_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41041_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41043_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41045_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41047_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41049_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41051_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41053_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41055_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41057_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41059_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41061_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41063_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41065_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41067_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41069_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41071_faces.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41001_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41003_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41005_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41007_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41009_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41011_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41013_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41015_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41017_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41019_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41021_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41023_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41025_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41027_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41029_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41031_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41033_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41035_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41037_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41039_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41041_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41043_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41045_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41047_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41049_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41051_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41053_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41055_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41057_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41059_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41061_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41063_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41065_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41067_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41069_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41071_featnames.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41001_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41003_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41005_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41007_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41009_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41011_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41013_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41015_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41017_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41019_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41021_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41023_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41025_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41027_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41029_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41031_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41033_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41035_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41037_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41039_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41041_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41043_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41045_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41047_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41049_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41051_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41053_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41055_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41057_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41059_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41061_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41063_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41065_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41067_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41069_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41071_edges.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41001_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41003_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41005_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41007_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41009_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41011_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41013_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41015_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41017_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41019_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41021_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41023_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41025_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41027_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41029_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41031_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41033_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41035_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41037_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41039_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41041_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41043_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41045_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41047_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41049_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41051_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41053_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41055_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41057_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41059_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41061_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41063_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41065_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41067_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41069_addr.zip 
-wget -q --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41071_addr.zip 
+wget http://www2.census.gov/geo/tiger/TIGER2016/STATE/tl_2016_us_state.zip --mirror --reject=html
+wget http://www2.census.gov/geo/tiger/TIGER2016/COUNTY/tl_2016_us_county.zip --mirror --reject=html
+wget http://www2.census.gov/geo/tiger/TIGER2016/PLACE/tl_2016_41_place.zip --mirror --reject=html
+wget http://www2.census.gov/geo/tiger/TIGER2016/COUSUB/tl_2016_41_cousub.zip --mirror --reject=html
+wget http://www2.census.gov/geo/tiger/TIGER2016/TRACT/tl_2016_41_tract.zip --mirror --reject=html
+wget http://www2.census.gov/geo/tiger/TIGER2016/BG/tl_2016_41_bg.zip --mirror --reject=html
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41001_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41003_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41005_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41007_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41009_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41011_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41013_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41015_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41017_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41019_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41021_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41023_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41025_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41027_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41029_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41031_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41033_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41035_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41037_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41039_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41041_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41043_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41045_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41047_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41049_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41051_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41053_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41055_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41057_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41059_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41061_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41063_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41065_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41067_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41069_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FACES/tl_2016_41071_faces.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41001_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41003_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41005_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41007_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41009_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41011_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41013_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41015_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41017_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41019_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41021_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41023_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41025_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41027_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41029_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41031_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41033_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41035_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41037_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41039_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41041_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41043_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41045_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41047_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41049_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41051_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41053_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41055_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41057_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41059_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41061_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41063_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41065_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41067_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41069_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/FEATNAMES/tl_2016_41071_featnames.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41001_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41003_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41005_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41007_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41009_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41011_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41013_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41015_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41017_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41019_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41021_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41023_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41025_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41027_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41029_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41031_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41033_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41035_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41037_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41039_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41041_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41043_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41045_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41047_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41049_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41051_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41053_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41055_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41057_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41059_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41061_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41063_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41065_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41067_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41069_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/EDGES/tl_2016_41071_edges.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41001_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41003_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41005_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41007_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41009_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41011_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41013_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41015_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41017_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41019_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41021_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41023_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41025_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41027_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41029_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41031_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41033_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41035_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41037_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41039_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41041_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41043_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41045_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41047_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41049_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41051_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41053_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41055_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41057_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41059_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41061_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41063_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41065_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41067_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41069_addr.zip 
+wget --mirror  http://www2.census.gov/geo/tiger/TIGER2016/ADDR/tl_2016_41071_addr.zip 
