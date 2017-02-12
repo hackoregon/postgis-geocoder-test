@@ -1,4 +1,3 @@
-
 #! /bin/bash
 
 echo "Creating a geocoder database"
