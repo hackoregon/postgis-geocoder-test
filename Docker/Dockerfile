@@ -21,3 +21,8 @@ COPY extensions.sql /gisdata/
 COPY make-tiger-scripts.psql /gisdata/
 RUN chmod +x /gisdata/*.bash
 RUN chown -R postgres:postgres /gisdata/
+
+# Run prefetch - doesn't need PostgreSQL service
+WORKDIR /gisdata
+USER postgres
+RUN /gisdata/prefetch.bash
