@@ -2,3 +2,4 @@ add runs to Dockerfile
 mount /gisdata on host
 test building on Windows
 extract test data from grind-and-pave PDF and test
+add password change script
