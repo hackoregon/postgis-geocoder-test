@@ -24,7 +24,8 @@ As built, the image contains the code and input data but is not active and usabl
 ### Populating the database
 1. Download the image: `docker pull docker.io/znmeb/postgis_geocoder`.
 2. Important! Set the environment variable POSTGRES_PASSWORD to "yourpasswordhere". The activation process sets this password for the `postgres` database superuser, and the database population scripts have that hard coded. Once you've populated the database you can change the password.
-3. Do `docker run --detach --name postgis_geocoder docker.io/znmeb/postgis_geocoder /bin/bash`. This will put you in a console inside the `postgis_geocoder` container. You'll be logged in as `postgres` in the `/gisdata` directory.
+3. Type `docker run --detach --name postgis_geocoder docker.io/znmeb/postgis_geocoder`. This will run the image detached (in the backgrounp), initializing the database in the process.
+4. Type `docker exec -it -u postgres postgis_geocoder /bin/bash`. You'll be logged in as `postgres` in the `/gisdata` directory.
 4. Type `/gisdata/create-geocoder-database.bash`. This will build the `geocoder` database.
 5. Type `exit` to leave the console after the script has finished. Then type
 
@@ -35,4 +36,4 @@ docker unpause postgis_geocoder
 docker stop postgis_geocoder
 ```
 
-The image is now ready for use.
+The image is now ready for use. The final populated image is about 2.3 GB.
