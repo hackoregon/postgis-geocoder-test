@@ -2,6 +2,7 @@
 
 echo "Creating a geocoder database"
 echo "If you've already created the geocoder database you can ignore the error messages."
+pushd /gisdata
 createdb -O postgres geocoder
 psql -d geocoder -f extensions.sql
 
@@ -12,3 +13,4 @@ chmod +x /gisdata/oregon.bash
 ./nation.bash
 ./oregon.bash
 pg_dump -Fc geocoder > geocoder.pgdump
+popd
