@@ -34,11 +34,3 @@ RUN mkdir -p /var/lib/hackoregon && chown postgres:postgres /var/lib/hackoregon
 WORKDIR /gisdata
 USER postgres
 RUN /gisdata/prefetch.bash
-
-# Now populate the database
-ENV PGDATA /var/lib/hackoregon
-RUN pg_ctl init \
-  && pg_ctl start -w \
-  && psql -c "ALTER ROLE postgres WITH PASSWORD 'yourpasswordhere';" \
-  && /gisdata/create-geocoder-database.bash > create-geocoder-database.log 2>&1 \
-  && pg_ctl stop -w
