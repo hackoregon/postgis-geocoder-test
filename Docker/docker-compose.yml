@@ -1,6 +1,6 @@
 version: '2.0'
 services:
     postgis_geocoder:
-        image: docker.io/znmeb/postgis-geocoder-test
+        image: docker.io/znmeb/postgis_geocoder
         ports: 
         - '5439:5432'
