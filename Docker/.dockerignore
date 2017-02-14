@@ -1,5 +1,3 @@
 README*
-Dockerfile-upstream
 docker-compose.yml
 todo
-docker-entrypoint.sh
