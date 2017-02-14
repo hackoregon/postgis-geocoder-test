@@ -1,0 +1,8 @@
+version: '2.0'
+services:
+    postgis_geocoder:
+        environment:
+            - POSTGRES_PASSWORD=yourpasswordhere
+        image: docker.io/znmeb/postgis_geocoder:populated
+        ports: 
+        - '5439:5432'
