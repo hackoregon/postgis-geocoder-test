@@ -1,8 +1,9 @@
-version: '2.0'
+version: '2.1'
 services:
-    postgis_geocoder:
+    postgis:
+        build: .
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
-        image: docker.io/znmeb/postgis_geocoder
+        image: docker.io/znmeb/postgis
         ports: 
         - '5439:5432'
