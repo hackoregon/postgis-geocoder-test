@@ -1,4 +1,9 @@
 #! /bin/bash
 
 # create geocoder database if it doesn't exist
-pg_dump geocoder > /dev/null || /gisdata/create-geocoder-database.bash
+if [ -e "/gisdata/geocoder.pgdump" ]
+then
+  pg_restore /gisdata/geocoder.pgdump
+else
+  /gisdata/create-geocoder-database.bash
+fi
