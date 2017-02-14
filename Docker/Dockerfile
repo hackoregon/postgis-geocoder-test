@@ -16,16 +16,16 @@ RUN apt-get update \
 # Copy scripts for geocoder database build to /gisdata
 RUN mkdir -p /gisdata/temp
 COPY prefetch.bash /gisdata/
+COPY create-geocoder-database.bash /gisdata/
 COPY extensions.sql /gisdata/
 COPY make-tiger-scripts.psql /gisdata/
 RUN chmod +x /gisdata/*.bash
 RUN chown -R postgres:postgres /gisdata/
 
 # Copy startup script to /docker-entrypoint-initdb.d
-# On the first invocation it will run after database comes up
 RUN mkdir -p /docker-entrypoint-initdb.d
-COPY create-geocoder-database.sh /docker-entrypoint-initdb.d/
-RUN chmod +x /docker-entrypoint-initdb.d/create-geocoder-database.sh
+COPY startup.sh /docker-entrypoint-initdb.d/
+RUN chmod +x /docker-entrypoint-initdb.d/startup.sh
 
 # Run prefetch now - doesn't need PostgreSQL service
 WORKDIR /gisdata
