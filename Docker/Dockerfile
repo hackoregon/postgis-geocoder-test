@@ -31,3 +31,12 @@ RUN chmod +x /docker-entrypoint-initdb.d/startup.sh
 WORKDIR /gisdata
 USER postgres
 RUN /gisdata/prefetch.bash
+
+# Now populate the database
+RUN mkdir -p /var/lib/hackoregon
+ENV PGDATA /var/lib/hackoregon
+RUN pg_ctl init \
+  && pg_ctl start \
+  && psql -c "ALTER ROLE postgres WITH PASSWORD 'yourpasswordhere';" \
+  && /gisdata/create-geocoder-database.bash \
+  && pg_ctl stop
