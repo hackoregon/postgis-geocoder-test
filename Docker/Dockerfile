@@ -40,5 +40,5 @@ ENV PGDATA /var/lib/hackoregon
 RUN pg_ctl init \
   && pg_ctl start -w \
   && psql -c "ALTER ROLE postgres WITH PASSWORD 'yourpasswordhere';" \
-  && /gisdata/create-geocoder-database.bash \
-  && pg_ctl stop
+  && /gisdata/create-geocoder-database.bash > create-geocoder-database.log 2>&1 \
+  && pg_ctl stop -w
