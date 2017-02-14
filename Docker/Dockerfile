@@ -27,13 +27,15 @@ RUN mkdir -p /docker-entrypoint-initdb.d
 COPY startup.sh /docker-entrypoint-initdb.d/
 RUN chmod +x /docker-entrypoint-initdb.d/startup.sh
 
+# PostgreSQL data directory
+RUN mkdir -p /var/lib/hackoregon && chown postgres:postgres /var/lib/hackoregon
+
 # Run prefetch now - doesn't need PostgreSQL service
 WORKDIR /gisdata
 USER postgres
 RUN /gisdata/prefetch.bash
 
 # Now populate the database
-RUN mkdir -p /var/lib/hackoregon
 ENV PGDATA /var/lib/hackoregon
 RUN pg_ctl init \
   && pg_ctl start \
