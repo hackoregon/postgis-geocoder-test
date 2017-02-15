@@ -2,5 +2,5 @@
 
 createdb -O postgres geocoder
 psql -d geocoder < create-extensions.sql
-psql -d geocoder < generate-nation.psql
-psql -d geocoder < generate-oregon.psql
+psql -c "SELECT loader_generate_nation_script(’sh’);" -d geocoder -tA > /gisdata/nation.sh
+psql -c "SELECT loader_generate_script(ARRAY[’OR’], 'sh')" -d geocoder -tA > /gisdata/oregon.sh
