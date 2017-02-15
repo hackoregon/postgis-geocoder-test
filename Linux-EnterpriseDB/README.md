@@ -1,36 +1,14 @@
-# Setting up PostGIS
+After a good bit of thrashing around and a PostGIS geocoder bug and a download blacklist, I have this working on my Fedora 25 workstation. This should work on any recent Linux.
 
-The current setup is for [Fedora Linux 25](https://fedoraproject.org/). It should work on other distros with the following dependencies:
+## Why EnterpriseDB?
+All the Linux distros come with PostgreSQL, and they all have upstream repositories where you can get the most recent version of PostgreSQL, so why EnterpriseDB? Two reasons, really:
 
-1. You need PostgreSQL, PostGIS and `pgrouting`. You do *not* need any header files.
-2. On Debian / Ubuntu installing PostgreSQL creates a database data area and enables / starts the service. On Fedora, you need to do these things after the install.
-3. Your Unix user ID must be mirrored in PostgreSQL and have PostgreSQL superuser privileges. This will be the case in the Hack Oregon virtual machine / Vagrant box.
+1. The standard libraries for PostgreSQL may already be installed, and things are set up to use them, possibly without your knowledge. Messing with them in any way will mess up your system. To get the 2016 data, we need PostgreSQL 9.6 and PostGIS 2.3, not whatever happened to be stable when the release happened.
 
-Note that with PostgreSQL on Linux, there are two sets of users, Linux users and PostgreSQL database users, often called 'roles' in PostgreSQL jargon. For most desktop installations, things are easier if they are mapped one-to-one. That is, the PostgreSQL role `znmeb` is the same person as the Linux user `znmeb`.
+    EnterpriseDB installs itself in /opt and doesn't mess with your paths. It sees any existing PostgreSQL and uses a different port, in my case 5433.
+2. EnterpriseDB ships with a *working* copy of PgAdmin4. I haven't found any packaged RPM or DEB for PgAdmin4 that works.
 
-When PostgreSQL is installed and configured, there will be a `postgres` Linux user. And there will be a `postgres` database role (user) inside the PostgreSQL database. This database user has superuser privileges - it can create other users and in general mess with stuff inside PostgreSQL just like `root` can on a Linux system.
-
-1. Create `geocoder` database with owner `postgres`
-      ```
-      ./1create-geocoder-database.bash
-      ```
-
-2. Download the TIGER geocoder data. This is a two-step process. For more details, see [_PostGIS in Action, Second Edition_](http://www.manning.com/obe2/).
-	```
-	./2make-geocoder-download-scripts.bash
-	```
-	This executes some code in the PostGIS package to create two scripts in `/gisdata`. One script, called `nation.bash`, downloads nationwide state and county shapefiles. The second, called `oregon.bash`, downloads detailed shapefiles for Oregon.
-
-	After the scripts are generated, do the following:
-	```
-	sudo su - postgres
-	cd /gisdata
-	```
-	This puts you into the PostgreSQL _Linux_ maintenance account. The scripts require this superuser privilege to run.
-
-	Run the scripts.
-	```
-	./nation.bash 2>&1 | tee nation.log
-	./oregon.bash 2>&1 | tee oregon.log
-	```
-	They will run longer the first time while downloading the raw data from the TIGER FTP site. Later ones will only download changed ZIP archives.
+## How to do it
+1. Install EnterpriseDB's 9.6 release for Linux and the PostGIS 2.3 spatial extension.
+2. Edit `env-enterprisedb` to get the right values for your installation. Note that the EnterpriseDB `postgres` password needs to be set in your `~/.pgpass` file for this stuff to work.
+3. Run `create-geocoder-database.bash`. This will make the database and set everything up for the next step.
