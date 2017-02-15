@@ -18,8 +18,6 @@ RUN mkdir -p /gisdata/temp
 
 # Load scripts into /gisdata
 COPY create-extensions.sql /gisdata/
-COPY generate-nation.psql /gisdata/
-COPY generate-oregon.psql /gisdata/
 COPY create-database.bash /gisdata/
 
 # Set USER and WORKDIR
