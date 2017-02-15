@@ -1,6 +1,8 @@
-CREATE EXTENSION postgis_tiger_geocoder CASCADE;
+CREATE EXTENSION postgis;
+CREATE EXTENSION fuzzystrmatch;
 CREATE EXTENSION address_standardizer;
 CREATE EXTENSION address_standardizer_data_us;
+CREATE EXTENSION postgis_tiger_geocoder;
 GRANT USAGE ON SCHEMA tiger TO PUBLIC;
 GRANT USAGE ON SCHEMA tiger_data TO PUBLIC;
 GRANT SELECT, REFERENCES, TRIGGER ON ALL TABLES IN SCHEMA tiger TO PUBLIC;
