@@ -1,4 +1,4 @@
 README*
 docker-entrypoint.sh
 Dockerfile-upstream
-docker-compose.yml
+*.yml

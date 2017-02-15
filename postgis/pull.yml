@@ -1,0 +1,8 @@
+version: '2.1'
+services:
+    postgis:
+        environment:
+            - POSTGRES_PASSWORD=yourpasswordhere
+        image: docker.io/znmeb/postgis:latest
+        ports: 
+        - '5439:5432'
