@@ -12,3 +12,16 @@ RUN apt-get update \
   unzip \
   wget \
   && apt-get clean
+
+# Create path for shapefiles
+RUN mkdir -p /gisdata/temp
+
+# Load scripts into /gisdata
+COPY create-extensions.sql /gisdata/
+COPY generate-nation.psql /gisdata/
+COPY generate-state.psql /gisdata/
+
+# Set USER and WORKDIR
+RUN chown -R postgres:postgres /gisdata
+USER postgres
+WORKDIR /gisdata
