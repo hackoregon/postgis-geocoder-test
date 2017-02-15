@@ -4,6 +4,6 @@ services:
         build: .
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
-        image: docker.io/znmeb/postgis
+        image: docker.io/znmeb/postgis:build
         ports: 
         - '5439:5432'
