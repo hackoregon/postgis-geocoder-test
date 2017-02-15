@@ -20,8 +20,10 @@ RUN mkdir -p /gisdata/temp
 COPY create-extensions.sql /gisdata/
 COPY generate-nation.psql /gisdata/
 COPY generate-state.psql /gisdata/
+COPY create-database.bash /gisdata/
 
 # Set USER and WORKDIR
+RUN chmod +x /gisdata/*.bash
 RUN chown -R postgres:postgres /gisdata
 USER postgres
 WORKDIR /gisdata
