@@ -1,0 +1,6 @@
+#! /bin/bash
+
+export PATH=/opt/PostgreSQL/9.6/bin:$PATH
+export PGHOST=localhost
+export PGPORT=5433
+export PGUSER=postgres
