@@ -1,4 +1,4 @@
-After a good bit of thrashing around and a PostGIS geocoder bug and a download blacklist, I have this working on my Fedora 25 workstation. This should work on any recent Linux.
+After a good bit of thrashing around and a [PostGIS geocoder bug](https://trac.osgeo.org/postgis/ticket/3699#comment:17) and a download blacklist, I have this working on my Fedora 25 workstation. This should work on any recent Linux. The Docker port should work on any Docker host.
 
 ## Why EnterpriseDB PostgreSQL?
 All the Linux distros come with PostgreSQL, and they all have upstream repositories where you can get the most recent version of PostgreSQL, so why EnterpriseDB? Two reasons, really:
