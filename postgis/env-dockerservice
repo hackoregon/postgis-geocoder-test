@@ -1,0 +1,9 @@
+#! /bin/bash
+
+# Use EnterpriseDB 9.6 binaries!
+export PATH=/opt/PostgreSQL/9.6/bin:$PATH
+
+export PGHOST=localhost
+export PGPORT=5439
+export PGUSER=postgres
+export PGPASSWORD=yourpasswordhere
