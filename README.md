@@ -1,2 +1,2 @@
 # postgis-geocoder-test
-Build / test a PostGIS geocoder for the state of Oregon
+A PostGIS geocoder for the city of Portland, including Washington and Clackamas county suburban areas.
