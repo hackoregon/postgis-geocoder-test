@@ -57,3 +57,84 @@ print(tribble(
 
 and the output will have three more columns on the right: lon (longitude), lat (latitude), and geojson (text serialized GeoJSON object for the intersection).
 
+## Parsers
+
+### Grind and Pave
+This is the most complicated parser, since the "Street", "From" and "To" fields are all given in a single column. The first order of business is to parse the `Task Name` column.
+
+```{r}
+library(dplyr)
+grind_and_pave <- tabula_G_P_Schedule_as_of_1_5_2017 %>%
+  mutate(source_file_name = "G_P Schedule as of 1-5-2017.pdf") %>%
+  rownames_to_column(var = "source_row_number") %>%
+  select(source_file_name, source_row_number, `Task Name`) %>%
+  filter(!is.na(`Task Name`), `Task Name` != "FY 17/18") %>%
+  mutate(
+    street = sub(":.*$", "", `Task Name`),
+    from = gsub("\r", " ", `Task Name`) %>%
+      sub("^.*:", "", .) %>%
+      sub(" to .*$", "", .),
+    to = gsub("\r", " ", `Task Name`) %>%
+      sub("^.* to ", "", .)) %>%
+  select(-`Task Name`)
+grind_and_pave$source_row_number <- as.integer(grind_and_pave$source_row_number)
+```
+## Pavement moratorium
+This one's easier - the only non-tidy feature is that some of the `Street` entries have a " Base-Repair" or similar tacked onto the end.
+
+```{r}
+pavement_moratorium <- Pavement_Moratorium %>%
+  mutate(
+    source_file_name = "Pavement Moratorium.csv",
+    street = sub("Base.*$", "", Street) %>% sub("-$", "", .)) %>%
+  rownames_to_column(var = "source_row_number") %>%
+  select(
+    source_file_name, 
+    source_row_number, 
+    street, 
+    from = `From Street`,
+    to = `To Street`)
+pavement_moratorium$source_row_number <- as.integer(pavement_moratorium$source_row_number)
+```
+## Planned fog seal
+```{r}
+planned_fog_seal <- Planned_Fog_Seal %>%
+  mutate(source_file_name = "Planned Fog Seal.csv") %>%
+  rownames_to_column(var = "source_row_number") %>%
+  select(
+    source_file_name, 
+    source_row_number, 
+    street = Street, 
+    from = `From Street`,
+    to = `To Street`)
+planned_fog_seal$source_row_number <- as.integer(planned_fog_seal$source_row_number)
+```
+
+## Planned paving
+```{r}
+planned_paving <- Planned_Paving %>%
+  mutate(source_file_name = "Planned Paving.csv") %>%
+  rownames_to_column(var = "source_row_number") %>%
+  select(
+    source_file_name, 
+    source_row_number, 
+    street = Street, 
+    from = `From Street`,
+    to = `To Street`)
+planned_paving$source_row_number <- as.integer(planned_paving$source_row_number)
+```
+
+## Bind rows to one data frame
+```{r}
+geocoder_input <- bind_rows(grind_and_pave, pavement_moratorium, planned_fog_seal, planned_paving)
+```
+
+## Addresses, intersections and lines
+If you look at `geocoder_input`, you'll notice some entries have no `from` or `to` value, and some have a `from` but no `to. They'll have different geocoding requirements. So we divide them into three data frames via `filter`.
+```{r}
+none <- geocoder_input %>% filter(is.na(from) & is.na(to))
+from_only <- geocoder_input %>% filter(!is.na(from) & is.na(to))
+both <- geocoder_input %>% filter(!is.na(from) & !is.na(to))
+```
+
+
