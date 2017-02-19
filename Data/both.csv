@@ -1,0 +1,224 @@
+source_file_name,source_row_number,street,from,to
+G_P Schedule as of 1-5-2017.pdf,1,NE 122nd Ave, Stanton,Halsey
+G_P Schedule as of 1-5-2017.pdf,2,NE 102nd Ave, Burnside St,Weidler St
+G_P Schedule as of 1-5-2017.pdf,3,SE 17th Ave, Andover Pl,Clatsop St
+G_P Schedule as of 1-5-2017.pdf,4,SE Clinton St, 21st Ave,26th Ave
+G_P Schedule as of 1-5-2017.pdf,5,SW Jefferson St, 841'W of 20th Ave (N side),Park Ave (W leg)
+G_P Schedule as of 1-5-2017.pdf,6,SW Morrison St, 18th Ave,11th Ave
+G_P Schedule as of 1-5-2017.pdf,7,SW Arthur St, 3rd Ave,241'E of 1st Ave
+G_P Schedule as of 1-5-2017.pdf,8,SW Caruthers St, 6th Ave,3rd Ave
+G_P Schedule as of 1-5-2017.pdf,9,SE 46th Ave, Glenwood St,Woodstock Blvd
+G_P Schedule as of 1-5-2017.pdf,10,SE Sandy Blvd, Stark St,Burnside St
+G_P Schedule as of 1-5-2017.pdf,11,N Greeley Ave, Interstate Ave,Lombard St
+G_P Schedule as of 1-5-2017.pdf,12,SW Beaverton-Hillsdale Hwy, 21st/Bertha Ct,39th
+G_P Schedule as of 1-5-2017.pdf,13,N Columbia Blvd, Peninsular Ave,Interstate Pl. ***shortened
+G_P Schedule as of 1-5-2017.pdf,14,SW Washington St, 9th Ave,1st Ave
+G_P Schedule as of 1-5-2017.pdf,15,NW Glisan St, 11th Ave,Broadway
+G_P Schedule as of 1-5-2017.pdf,18,NW 21st Ave, Marshall St,Thurman Ramp
+G_P Schedule as of 1-5-2017.pdf,19,NW 14th Ave, Burnside St,Northrup St
+G_P Schedule as of 1-5-2017.pdf,20,NW 21st Ave, Vaughn St,Sherlock Ave
+G_P Schedule as of 1-5-2017.pdf,21,NE 57th Ave, Halsey St,Fremont St
+G_P Schedule as of 1-5-2017.pdf,22,N Rosa Parks Way, Willamette Blvd,Delaware Ave
+G_P Schedule as of 1-5-2017.pdf,23,N Rosa Parks Way, Interstate Ave,Williams Ave
+G_P Schedule as of 1-5-2017.pdf,24,SE Tolman St, Bybee Blvd,118'E of 36th Ave
+G_P Schedule as of 1-5-2017.pdf,25,N Williams Ave, Beech St,Jessup St
+G_P Schedule as of 1-5-2017.pdf,26,SE Harold St, 52nd Ave,Foster Rd
+G_P Schedule as of 1-5-2017.pdf,27,SE Harold St, 92nd Ave,96th Ave
+G_P Schedule as of 1-5-2017.pdf,28,SE Cesar Chavez blvd, Holgate Blvd,Burnside St
+G_P Schedule as of 1-5-2017.pdf,29,N Willamette Blvd, 1041'W of Macrum Ave,Wall Ave
+G_P Schedule as of 1-5-2017.pdf,30,N Albina, Prescott St,Ainsworth St
+G_P Schedule as of 1-5-2017.pdf,31,SE 27th Ave, Crystal Springs Blvd,Bybee Blvd
+G_P Schedule as of 1-5-2017.pdf,32,N Killingsworth St, Borthwick Ave,Williams Ave
+G_P Schedule as of 1-5-2017.pdf,33,N St. Louis Ave, Ivanhoe St,Pier Park Pl
+G_P Schedule as of 1-5-2017.pdf,34,NW Thurman St, 26th Ave,15th Ave
+Pavement Moratorium.csv,3,Ne 52Nd Ave,Clackamas St,Halsey St
+Pavement Moratorium.csv,4,W Burnside St ,325' E Of Maywood Dr,503' E Of Maywood Rd
+Pavement Moratorium.csv,5,W Burnside St ,Macleay Blvd,Maywood Dr
+Pavement Moratorium.csv,7,Ne 9Th Ave ,Halsey St,Broadway
+Pavement Moratorium.csv,8,Nw Glisan St - ,13Th Ave,11Th Ave
+Pavement Moratorium.csv,9,Nw Thurman St,Gordon St,31St Ave
+Pavement Moratorium.csv,10,Nw 16Th Ave,Lovejoy,Thurman St
+Pavement Moratorium.csv,11,Sw Pine St,4Th Ave,Naito Pkwy
+Pavement Moratorium.csv,12,Ne Laurelhurst Pl,42Nd Ave,43Rd Ave
+Pavement Moratorium.csv,13,Nw Pettygrove St,Nw 24Th Ave,Nw 25Th Ave
+Pavement Moratorium.csv,14,Ne Multnomah St,1St Ave,Mlk Jr Blvd
+Pavement Moratorium.csv,15,N Multnomah St,Interstate Ave,1St Ave
+Pavement Moratorium.csv,16,Se Belmont St,12Th Ave,Se 25Th Av
+Pavement Moratorium.csv,17,Se Belmont St,49Th Ave,55Th Ave
+Pavement Moratorium.csv,18,Se Water Ave,Alder St,Stark St
+Pavement Moratorium.csv,19,Se Yamhill St,69Th Ave,76Th Ave
+Pavement Moratorium.csv,20,Sw 14Th Ave,Jefferson St,196' N Of Morrison St (Struct)
+Pavement Moratorium.csv,21,Sw 1St Ave,Yamhill St,Morrison St
+Pavement Moratorium.csv,22,Sw Alder St,14Th Ave,Burnside St
+Pavement Moratorium.csv,23,E Burnside St,44Th Ave,47Th Ave
+Pavement Moratorium.csv,24,N Wheeler Ave,Winning Way,Weidler St
+Pavement Moratorium.csv,25,Ne 16Th Dr,13Th Ave,Multnomah St
+Pavement Moratorium.csv,26,Ne 41St Ave,Wistaria Dr,Fremont St
+Pavement Moratorium.csv,27,Ne 47Th Ave,Halsey St,Sandy Blvd
+Pavement Moratorium.csv,28,Ne Holladay St,9Th Ave,13Th Ave
+Pavement Moratorium.csv,29,Ne Multnomah St,16Th Ave,21St Ave
+Pavement Moratorium.csv,30,E Burnside St,32Nd Ave,Cesar E Chavez Blvd
+Pavement Moratorium.csv,31,Ne Tillamook St,37Th Ave,43Rd Ave
+Pavement Moratorium.csv,32,Se Morrison St,12Th Ave,19Th Ave
+Pavement Moratorium.csv,33,Nw Everett St,23Rd Ave,19Th Ave
+Pavement Moratorium.csv,34,Se Alder St,SE 3Rd Ave,SE Mlk Jr
+Pavement Moratorium.csv,35,Ne Glisan St,Ne 67Th Ave,Ne 82Nd Ave
+Pavement Moratorium.csv,36,Ne 28Th Ave - ,Ne Couch St,Ne Flanders St
+Pavement Moratorium.csv,37,318 Sw 3Rd Ave,Sw Stark St,Sw Oak St
+Pavement Moratorium.csv,40,Ne Cesar E Chavez Blvd,Ne Wasco St,Ne Senate St
+Pavement Moratorium.csv,41,Ne Glisan St,Ne 24Th Ave,Ne 26Th Ave/Ne Buxton St
+Pavement Moratorium.csv,42,N Larrabee Ave,N Interstate Ave,N Winning Way
+Pavement Moratorium.csv,43,Ne Wheeler Ave,N Interstate Ave,Ne Holladay St
+Pavement Moratorium.csv,44,Ne 16Th Ave,E Burnside St,Ne Sandy Blvd
+Pavement Moratorium.csv,46,Ne Stanton St,Ne 27Th Ave,Ne 28Th Ave
+Pavement Moratorium.csv,47,Nw 21St Ave,Nw Sherlock Ave,Nw Front Ave
+Pavement Moratorium.csv,48,Nw Pettygrove St,25Th Ave,24Th Ave
+Pavement Moratorium.csv,49,Sw Columbia St,3Rd Ave,2Nd Ave
+Pavement Moratorium.csv,50,Ne 41St Ave,Ne Couch St,Ne Davis St
+Pavement Moratorium.csv,51,Ne 7Th Ave,Ne Multnomah St,Ne Weidler St
+Pavement Moratorium.csv,52,Ne 28Th Ave,Glisan St,Broadway
+Pavement Moratorium.csv,53,Ne Halsey St,60Th Ave,70Th Ave
+Pavement Moratorium.csv,54,Nw Northrup St,23Rd Ave,14Th Ave
+Pavement Moratorium.csv,55,Nw Broadway,Burnside St,Hoyt St
+Pavement Moratorium.csv,56,Se 7Th Ave,Se Belmont St,Se Stark St
+Pavement Moratorium.csv,57,Se Ankeny St,Se Martin Luther King Jr Blvd,Se Sandy Blvd / Se 11Th Ave
+Pavement Moratorium.csv,58,Sw Columbia St,225' W Of 18Th Ave,Sw Broadway
+Pavement Moratorium.csv,59,Sw Columbia St,Sw Broadway,Sw Naito Pkwy
+Pavement Moratorium.csv,60,Sw Jefferson St,Sw Park Ave,Sw Naito Pkwy
+Pavement Moratorium.csv,61,W Burnside St/Sw 4Th Ave,Sw 5Th Ave,Sw 3Rd Ave
+Pavement Moratorium.csv,62,W Burnside St,19Th Ave,King Ave
+Pavement Moratorium.csv,63,Ne 16Th Ave,Ne Glisan St,Ne Irving St
+Pavement Moratorium.csv,65,Ne 15Th Ave,Ne Knott St,Ne Stanton St
+Pavement Moratorium.csv,66,Sw 1St Ave,Sw Jefferson St,Sw Columbia St
+Pavement Moratorium.csv,69,Ne Broadway,22Nd Ave,24Th Ave
+Pavement Moratorium.csv,70,Ne Broadway,37th Ave,Cesar E Chavez Blvd
+Pavement Moratorium.csv,71,Se 60Th Ave,Harrison St,180' N of Hawthorne Blvd
+Pavement Moratorium.csv,72,Sw Stark St,Broadway,SW 10th Ave
+Pavement Moratorium.csv,73,Se Ladd Av,Se Division St,Se Hawthorne St
+Pavement Moratorium.csv,74,Se Belmont St,Se Grand Av,Se 12Th Av
+Pavement Moratorium.csv,75,Nw 11Th Ave,Nw Hoyt St,Nw Glisan St
+Pavement Moratorium.csv,76,Ne Weidler St,Martin Luther King Jr Blvd,Grand Ave
+Pavement Moratorium.csv,77,Se Morrison St,Grand Ave,12Th Ave
+Pavement Moratorium.csv,78,Se 11Th Ave,Division St,Hawthorne Blvd
+Pavement Moratorium.csv,79,Ne 24Th Ave,Weidler St (W Side),Brazee St
+Pavement Moratorium.csv,80,Ne Grand Ave,111' S of Lloyd Blvd,Holladay St
+Pavement Moratorium.csv,81,Ne 20Th Ave,Glisan St,21St Ave
+Pavement Moratorium.csv,82,Ne Irving St,12Th Ave,22Nd Ave
+Pavement Moratorium.csv,83,Ne Weidler St,10Th Ave,15Th Ave
+Pavement Moratorium.csv,84,Nw Naito Pky,Davis St,9Th Ave
+Pavement Moratorium.csv,85,Ne Sandy Blvd,27Th Ave,29Th Ave
+Pavement Moratorium.csv,86,Ne 16Th Ave/15Th Ave,Multnomah St,Halsey St
+Pavement Moratorium.csv,87,Ne 12Th Ave,Glisan St,593' N Of Glisan St
+Pavement Moratorium.csv,88,Ne Lloyd Blvd,Oregon,231 Ft East Of 1St Ave
+Pavement Moratorium.csv,89,Ne Siskiyou St,Ne 64th Ave,Ne Sandy Blvd
+Pavement Moratorium.csv,90,Sw 1st Ave,Sw Columbia St,Sw Jefferson St
+Pavement Moratorium.csv,91,W Burnside St,King Ave,21st Ave
+Pavement Moratorium.csv,92,NE Sandy Blvd,NE 47th Ave,NE 82nd Ave
+Pavement Moratorium.csv,93,Ne Hancock St,Ne 48th Ave,Ne 49th Ave
+Pavement Moratorium.csv,94,Ne Hazelfern Pl,Ne Cesar E Chavez Blvd,Ne 42nd Ave
+Pavement Moratorium.csv,95,E Burnside St,Se Martin Luther King Jr Blvd,Se Grand AVe
+Pavement Moratorium.csv,96,Ne 58th Ave,Ne Flanders St,Ne Glisan St
+Pavement Moratorium.csv,97,Nw 16Th Ave,Couch St,Glisan St
+Pavement Moratorium.csv,98,Sw Madison St,Sw 5th Ave,Sw 4th Ave
+Pavement Moratorium.csv,99,Ne Euclid Ave,Ne 47th Ave,Ne 49th Ave
+Pavement Moratorium.csv,100,SE Belmont St,SE Cesar E Chavez Blvd,SE Peacock Ln
+Pavement Moratorium.csv,101,NW Ariel Ter,Alpine Ter,Culpepper Ter
+Pavement Moratorium.csv,102,NE 53rd Ave,Tillamook St,Thompson St
+Pavement Moratorium.csv,103,W Burnside St,11th,10th
+Pavement Moratorium.csv,105,SW 15th Ave,Alder St,Burnside St
+Pavement Moratorium.csv,106,NE  EVERETT ST,57TH AVE,58TH AVE
+Pavement Moratorium.csv,107,NW  DAVIS ST,NW 6TH AVE,NW BROADWAY
+Pavement Moratorium.csv,108,Se Grand Ave,Se Clay St,Se Main st
+Pavement Moratorium.csv,109,SW 17TH AVE,SW SALMON ST,SW TAYLOR ST
+Planned Fog Seal.csv,1,Se Main St,30Th Ave,32Nd Ave
+Planned Fog Seal.csv,2,NW  24TH AVE,GLISAN ST,VAUGHN ST
+Planned Fog Seal.csv,3,NW  SAVIER ST,28TH AVE,23RD AVE
+Planned Fog Seal.csv,4,NW  QUIMBY ST,25TH AVE,23RD AVE
+Planned Fog Seal.csv,5,NW  PETTYGROVE ST,26TH AVE,23RD AVE
+Planned Fog Seal.csv,6,NW  OVERTON ST,21ST AVE,19TH AVE
+Planned Fog Seal.csv,7,NW  20TH AVE,LOVEJOY SY,RALEIGH ST
+Planned Fog Seal.csv,8,NW  17TH AVE,MARSHALL ST,NORTHRUP ST
+Planned Fog Seal.csv,9,NW  JOHNSON ST,25TH AVE,23RD AVE
+Planned Fog Seal.csv,10,NW  JOHNSON ST,15TH AVE,14TH AVE
+Planned Fog Seal.csv,11,NW  JOHNSON ST,17TH AVE,16TH AVE
+Planned Fog Seal.csv,12,NW  IRVING ST,241’ W of 24TH AVE,23RD AVE
+Planned Fog Seal.csv,13,NW  HOYT ST,24TH AVE,23RD AVE
+Planned Fog Seal.csv,14,NW  FLANDERS ST,18TH AVE,16TH AVE
+Planned Fog Seal.csv,15,SE  30TH PL,PINE ST,BURNSIDE ST
+Planned Fog Seal.csv,16,SE  9TH AVE,PINE ST,BURNSIDE ST
+Planned Fog Seal.csv,17,SE  10TH AVE,ASH ST,BURNSIDE ST
+Planned Fog Seal.csv,18,SE  13TH AVE,STARK ST,BURNSIDE ST
+Planned Fog Seal.csv,19,SE  27TH AVE,STARK ST,ANKENY ST
+Planned Fog Seal.csv,20,SE  PINE ST,CESAR E CHAVEZ BLVD,44TH AVE
+Planned Fog Seal.csv,21,SE  OAK CT,41ST AVE,44TH AVE
+Planned Fog Seal.csv,22,SE  WASHINGTON ST,41ST AVE,45TH AVE
+Planned Fog Seal.csv,23,SE  YAMHILL ST,CESAR E CHAVEZ BLVD,45TH AVE
+Planned Fog Seal.csv,24,SE 3RD AVE,HAWTHORNE BLVD,TAYLOR ST
+Planned Fog Seal.csv,25,SE  36TH AVE,SALMON ST,YAMHILL ST
+Planned Fog Seal.csv,26,SE  17TH AVE,HAWTHORNE BLVD,BELMONT ST
+Planned Fog Seal.csv,27,SE  28TH AVE,HAWTHORNE BLVD,BELMONT ST
+Planned Fog Seal.csv,28,SE  47TH AVE,SALMON ST,YAMHILL ST
+Planned Fog Seal.csv,29,SE  9TH AVE,MAIN ST,BELMONT ST
+Planned Fog Seal.csv,30,SE  32ND PL,HAWTHORNE BLVD,SALMON ST
+Planned Fog Seal.csv,31,SE  56TH AVE,MADISON ST,SALMON ST
+Planned Fog Seal.csv,32,SE  58TH AVE,LINCOLN ST,SALMON ST
+Planned Fog Seal.csv,33,SE  MAPLE AVE,POPLAR AVE,16TH AVE
+Planned Fog Seal.csv,34,SE  HOLLY ST,MAPLE AVE,POPLAR AVE
+Planned Fog Seal.csv,35,SE  POPLAR AVE,16TH AVE,HAWTHORNE BLVD
+Planned Fog Seal.csv,36,SE  LOCUST AVE,CYPRESS AVE,20TH AVE
+Planned Fog Seal.csv,37,SE  16TH AVE,LADD AVE,POPLAR AVE
+Planned Fog Seal.csv,38,SE  CYPRESS AVE,HARRISON ST,LOCUST ST
+Planned Fog Seal.csv,39,SE  47TH AVE,LINCOLN ST,HARRISON ST
+Planned Fog Seal.csv,40,SE  51ST AVE,LINCOLN ST,HAWTHORNE BLVD
+Planned Fog Seal.csv,41,NE  45TH AVE,ALAMEDA ST,FREMONT ST
+Planned Fog Seal.csv,42,NE  49TH AVE,ALAMEDA ST,FREMONT ST
+Planned Fog Seal.csv,43,NE  50TH AVE,ALAMEDA ST,FREMONT ST
+Planned Fog Seal.csv,44,NE  53RD AVE,ALAMEDA ST,FREMONT ST
+Planned Fog Seal.csv,45,NE  54TH AVE,ALAMEDA ST,FREMONT ST
+Planned Fog Seal.csv,46,NE  31ST AVE,KNOTT ST,FREMONT ST
+Planned Fog Seal.csv,47,NE  32ND AVE,SISKIYOU ST,KLICKITAT ST
+Planned Fog Seal.csv,48,NE  46TH AVE,ALAMEDA ST,FREMONT ST
+Planned Fog Seal.csv,49,NE  48TH AVE,ALAMEDA ST,KLICKITAT ST
+Planned Fog Seal.csv,50,NE  TILLAMOOK ST,WILLIAMS AVE,MARTIN LUTHER KING JR BLVD
+Planned Fog Seal.csv,51,NE  12TH AVE,BROADWAY,KNOTT ST
+Planned Fog Seal.csv,52,NE  16TH AVE,BROADWAY,KNOTT ST
+Planned Fog Seal.csv,53,NE  17TH AVE,BROADWAY,KNOTT ST
+Planned Fog Seal.csv,54,NE  18TH AVE,TILLAMOOK ST,KNOTT ST
+Planned Fog Seal.csv,55,NE  TILLAMOOK ST,16TH AVE,30TH AVE
+Planned Fog Seal.csv,56,NE  19TH AVE,TILLAMOOK ST,THOMPSON ST
+Planned Fog Seal.csv,57,NE  26TH AVE,BROADWAY,KNOTT ST
+Planned Fog Seal.csv,58,NE  27TH AVE,BROADWAY,KNOTT ST
+Planned Fog Seal.csv,59,NE  35TH AVE,118’ S of U.S. GRANT PL,U.S. GRANT PL
+Planned Fog Seal.csv,60,NE  36TH AVE,100’ S of U.S. GRANT PL,U.S. GRANT PL
+Planned Fog Seal.csv,61,NE  14TH AVE,BROADWAY,KNOTT ST
+Planned Fog Seal.csv,62,NE  30TH AVE,HANCOCK ST,KNOTT ST
+Planned Fog Seal.csv,63,NE  53RD AVE,HALSEY ST,SACRAMENTO ST
+Planned Fog Seal.csv,64,NE  COUCH ST,28TH AVE,CESAR E CHAVEZ BLVD
+Planned Fog Seal.csv,65,SE  56TH AVE,LINCOLN ST,HAWTHORNE BLVD
+Planned Fog Seal.csv,66,NW  FLANDERS ST,21ST AVE,19TH AVE
+Planned Fog Seal.csv,67,SW  MONTGOMERY ST,HARBOR DR,RIVER DR
+Planned Paving.csv,1,N Vancouver Ave,N Russell St,N Monroe St
+Planned Paving.csv,2,Se Martin Luther King Jr Blvd,Se Mill St,Se Madison St
+Planned Paving.csv,3,Sw 10Th Ave,Main St,Burnside St
+Planned Paving.csv,4,Nw 10Th Ave,Burnside St,Irving St
+Planned Paving.csv,5,Nw Glisan St,11Th Ave,Broadway
+Planned Paving.csv,6,Se Martin Luther King Jr Blvd,Washington St,Burnside St
+Planned Paving.csv,7,Se Grand Ave,Salmon St,Stark St
+Planned Paving.csv,8,NE Couch Ct,3rd Ave,Couch St
+Planned Paving.csv,9,NW  THURMAN ST,26TH AVE,378’ E of 21ST AVE
+Planned Paving.csv,10,NW  21ST AVE,MARSHALL ST,Vaughn st-Thruman st Ramp
+Planned Paving.csv,11,NW  THURMAN ST,19TH AVE,15TH AVE
+Planned Paving.csv,12,NW  14TH AVE,BURNSIDE ST,NORTHRUP ST
+Planned Paving.csv,13,SW  WASHINGTON ST,9TH AVE,1ST AVE
+Planned Paving.csv,14,SW  MORRISON ST,18TH AVE,11TH AVE
+Planned Paving.csv,15,SW  JEFFERSON ST,841’ W of 20TH AVE (N SIDE),PARK AVE
+Planned Paving.csv,16,SE  GRAND AVE,OAK ST,BURNSIDE ST
+Planned Paving.csv,17,SE  SANDY BLVD,STARK ST,BURNSIDE ST
+Planned Paving.csv,18,N  INTERSTATE AVE,LARRABEE ST,TILLAMOOK ST
+Planned Paving.csv,19,N  BROADWAY,BROADWAY BRG,VANCOUVER AVE
+Planned Paving.csv,20,NE  57TH AVE,HALSEY ST,FREMONT ST
+Planned Paving.csv,21,NE  BROADWAY,WILLIAMS AVE,3RD AVE
+Planned Paving.csv,22,SE  CESAR E CHAVEZ BLVD,HOLGATE BLVD,BURNSIDE ST
+Planned Paving.csv,23,NE  60TH AVE,BURNSIDE ST,HALSEY ST
+Planned Paving.csv,24,NW  21ST AVE,Thurman st-Vaugnst Ramp,SHERLOCK AVE
+Planned Paving.csv,25,NW 20th,NW Raleight to Upshur St,NW Thurman from 21st 50 19th Ave
