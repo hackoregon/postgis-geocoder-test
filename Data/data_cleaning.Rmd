@@ -1,6 +1,8 @@
 ---
 title: "Hack Oregon Transportation Data Cleaning / Geocoding"
-output: html_notebook
+output:
+  github_document: default
+  html_notebook: default
 ---
 
 ## Source data
@@ -79,7 +81,7 @@ grind_and_pave <- tabula_G_P_Schedule_as_of_1_5_2017 %>%
   select(-`Task Name`)
 grind_and_pave$source_row_number <- as.integer(grind_and_pave$source_row_number)
 ```
-## Pavement moratorium
+### Pavement moratorium
 This one's easier - the only non-tidy feature is that some of the `Street` entries have a " Base-Repair" or similar tacked onto the end.
 
 ```{r}
@@ -96,7 +98,8 @@ pavement_moratorium <- Pavement_Moratorium %>%
     to = `To Street`)
 pavement_moratorium$source_row_number <- as.integer(pavement_moratorium$source_row_number)
 ```
-## Planned fog seal
+
+### Planned fog seal
 ```{r}
 planned_fog_seal <- Planned_Fog_Seal %>%
   mutate(source_file_name = "Planned Fog Seal.csv") %>%
@@ -110,7 +113,7 @@ planned_fog_seal <- Planned_Fog_Seal %>%
 planned_fog_seal$source_row_number <- as.integer(planned_fog_seal$source_row_number)
 ```
 
-## Planned paving
+### Planned paving
 ```{r}
 planned_paving <- Planned_Paving %>%
   mutate(source_file_name = "Planned Paving.csv") %>%
@@ -124,17 +127,19 @@ planned_paving <- Planned_Paving %>%
 planned_paving$source_row_number <- as.integer(planned_paving$source_row_number)
 ```
 
-## Bind rows to one data frame
+## Collection for geocoding
+### Bind rows to one data frame
 ```{r}
 geocoder_input <- bind_rows(grind_and_pave, pavement_moratorium, planned_fog_seal, planned_paving)
 ```
 
-## Addresses, intersections and lines
-If you look at `geocoder_input`, you'll notice some entries have no `from` or `to` value, and some have a `from` but no `to. They'll have different geocoding requirements. So we divide them into three data frames via `filter`.
+### Addresses, intersections and lines
+If you look at `geocoder_input`, you'll notice some entries have no `from` or `to` value, and some have a `from` but no `to`. They'll have different geocoding requirements. So we divide them into three data frames via `filter`.
 ```{r}
-none <- geocoder_input %>% filter(is.na(from) & is.na(to))
+no_cross_streets <- geocoder_input %>% filter(is.na(from) & is.na(to))
+write_csv(no_cross_streets, path = "no_cross_streets.csv")
 from_only <- geocoder_input %>% filter(!is.na(from) & is.na(to))
+write_csv(from_only, path = "from_only.csv")
 both <- geocoder_input %>% filter(!is.na(from) & !is.na(to))
+write_csv(both, path = "both.csv")
 ```
-
-
