@@ -17,6 +17,7 @@ Once converted to CSV, inspection shows that the data are in multiple formats. T
 First, we import the CSV files to individual data frames.
 
 ```{r}
+if(!require(readr)) install.packages("readr")
 library(readr)
 Pavement_Moratorium <- read_csv(
   "/home/Projects/postgis-geocoder-test/Data/Pavement Moratorium.csv",
@@ -52,7 +53,9 @@ Note that the columns defined are different for the files. The columns we need t
 This is the most complicated parser, since the `Street`, `From Street` and `To Street` fields are all given in a single column. There are also two extraneous rows that need to be removed.
 
 ```{r}
+if(!require(dplyr)) install.packages("dplyr")
 library(dplyr)
+if(!require(tibble)) install.packages("tibble")
 library(tibble)
 grind_and_pave <- tabula_G_P_Schedule_as_of_1_5_2017 %>%
   mutate(source_file_name = "G_P Schedule as of 1-5-2017.pdf") %>%
@@ -67,7 +70,6 @@ grind_and_pave <- tabula_G_P_Schedule_as_of_1_5_2017 %>%
     to_street = gsub("\r", " ", `Task Name`) %>%
       sub("^.* to ", "", .)) %>%
   select(-`Task Name`)
-write_csv(grind_and_pave, path = "tidy_grind_and_pave.csv")
 ```
 
 #### Pavement moratorium
@@ -85,7 +87,6 @@ pavement_moratorium <- Pavement_Moratorium %>%
     street, 
     from_street = `From Street`,
     to_street = `To Street`)
-write_csv(pavement_moratorium, path = "tidy_pavement_moratorium.csv")
 ```
 
 #### Planned fog seal
@@ -99,7 +100,6 @@ planned_fog_seal <- Planned_Fog_Seal %>%
     street = Street, 
     from_street = `From Street`,
     to_street = `To Street`)
-write_csv(planned_fog_seal, path = "tidy_planned_fog_seal.csv")
 ```
 
 #### Planned paving
@@ -113,5 +113,17 @@ planned_paving <- Planned_Paving %>%
     street = Street, 
     from_street = `From Street`,
     to_street = `To Street`)
-write_csv(planned_paving, path = "tidy_planned_paving.csv")
 ```
+
+## Combine the tidied files and ship them off to the PostGIS geocoder
+```{r}
+if(!require(RPostgreSQL)) install.packages("RPostgreSQL")
+library(RPostgreSQL)
+tidy_geocoder_input <- bind_rows(
+  grind_and_pave,
+  pavement_moratorium,
+  planned_fog_seal,
+  planned_paving)
+write_csv(tidy_geocoder_input, path = "tidy_geocoder_input.csv")
+```
+
