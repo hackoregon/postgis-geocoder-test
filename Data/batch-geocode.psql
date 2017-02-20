@@ -1,0 +1,42 @@
+-- based on PostGIS in Action, Second Edition, section 8.4.3
+
+-- create the table and populate it from CSV
+DROP TABLE IF EXISTS tidy_geocoder_input;
+CREATE TABLE tidy_geocoder_input (
+  source_file_name text,
+  source_row_number text,
+  street text,
+  from_street text,
+  to_street text);
+\copy tidy_geocoder_input from 'tidy_geocoder_input.csv' with header csv
+
+-- add the columns for the geocoding
+ALTER TABLE tidy_geocoder_input ADD COLUMN addid serial NOT NULL PRIMARY KEY;
+ALTER TABLE tidy_geocoder_input ADD COLUMN addy_from text;
+ALTER TABLE tidy_geocoder_input ADD COLUMN addy_to text;
+ALTER TABLE tidy_geocoder_input ADD COLUMN rating_from integer;
+ALTER TABLE tidy_geocoder_input ADD COLUMN rating_to integer;
+ALTER TABLE tidy_geocoder_input ADD COLUMN geom_from geometry;
+ALTER TABLE tidy_geocoder_input ADD COLUMN geom_to geometry;
+
+-- geocode the 'from' intersections
+UPDATE tidy_geocoder_input
+SET (rating_from, addy_from, geom_from) =
+  (COALESCE((g).rating, -1), pprint_addy((g).addy), (g).geomout)
+FROM
+  (SELECT * FROM tidy_geocoder_input WHERE rating_from IS NULL LIMIT 500) AS a
+  LEFT JOIN LATERAL
+  geocode_intersection(a.street, a.from_street, 'OR', 'Portland', num_results := 1) AS g
+  ON ((g).rating < 99)
+WHERE a.addid = tidy_geocoder_input.addid;
+
+-- geocode the 'to' intersections
+UPDATE tidy_geocoder_input
+SET (rating_to, addy_to, geom_to) =
+  (COALESCE((g).rating, -1), pprint_addy((g).addy), (g).geomout)
+FROM
+  (SELECT * FROM tidy_geocoder_input WHERE rating_to IS NULL LIMIT 500) AS a
+  LEFT JOIN LATERAL
+  geocode_intersection(a.street, a.to_street, 'OR', 'Portland', num_results := 1) AS g
+  ON ((g).rating < 99)
+WHERE a.addid = tidy_geocoder_input.addid;
