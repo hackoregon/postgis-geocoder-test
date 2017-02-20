@@ -1,8 +1,8 @@
 ---
 title: "Hack Oregon Transportation Data Cleaning / Geocoding"
 output:
-  github_document: default
   html_notebook: default
+  github_document: default
 ---
 
 ## Source data
@@ -35,6 +35,7 @@ print(Planned_Fog_Seal)
 Planned_Paving <- read_csv(
   "/home/Projects/postgis-geocoder-test/Data/Planned Paving.csv",
   col_types = cols(OBJECTID = col_character()))
+print(Planned_Paving)
 
 tabula_G_P_Schedule_as_of_1_5_2017 <- read_csv(
   "/home/Projects/postgis-geocoder-test/Data/tabula-G_P Schedule as of 1-5-2017.csv",
@@ -42,46 +43,34 @@ tabula_G_P_Schedule_as_of_1_5_2017 <- read_csv(
 print(tabula_G_P_Schedule_as_of_1_5_2017)
 
 ```
-### Outputs
-In theory, all we have to do is extract the intersections from these files into a single table and pass it on to the PostGIS geocoders `geocode_intersection` operation. However, we want to tag the input table rows with identifiers so the people reading the output will know where the inputs came from.
+### Column names
+Note that the columns defined are different for the files. The columns we need to geocode the intersections are the `Street`, `From Street` and `To Street`. Moreover, the "Grind and Pave" data has those columns combined in a single `Task Name` column, and we want "database friendly" column names - all lower case letters with underscores instead of spaces for separators. So we use `dplyr` to make new tidy data frames and save them to new CSV files. We will tag the rows with a source file name and source file row number for traceability.
 
-In addition, most of the Hack Oregon processing works with geometric / geographic objects in GeoJSON format, so we want to create GeoJSON representations of the geocoded intersections for downstream processing.
+### Parsers
 
-So our input table to the PostGIS geocoder will look like this:
-
-```{r}
-library(tibble)
-print(tribble(
-  ~source_file_name, ~source_row_number, ~street, ~cross_street, ~from_or_to,
-  "file", 1, "Main St", "State St", "from"))
-
-```
-
-and the output will have three more columns on the right: lon (longitude), lat (latitude), and geojson (text serialized GeoJSON object for the intersection).
-
-## Parsers
-
-### Grind and Pave
-This is the most complicated parser, since the "Street", "From" and "To" fields are all given in a single column. The first order of business is to parse the `Task Name` column.
+#### Grind and Pave
+This is the most complicated parser, since the `Street`, `From Street` and `To Street` fields are all given in a single column. There are also two extraneous rows that need to be removed.
 
 ```{r}
 library(dplyr)
+library(tibble)
 grind_and_pave <- tabula_G_P_Schedule_as_of_1_5_2017 %>%
   mutate(source_file_name = "G_P Schedule as of 1-5-2017.pdf") %>%
   rownames_to_column(var = "source_row_number") %>%
-  select(source_file_name, source_row_number, `Task Name`) %>%
   filter(!is.na(`Task Name`), `Task Name` != "FY 17/18") %>%
+  select(source_file_name, source_row_number, `Task Name`) %>%
   mutate(
     street = sub(":.*$", "", `Task Name`),
-    from = gsub("\r", " ", `Task Name`) %>%
+    from_street = gsub("\r", " ", `Task Name`) %>%
       sub("^.*:", "", .) %>%
       sub(" to .*$", "", .),
-    to = gsub("\r", " ", `Task Name`) %>%
+    to_street = gsub("\r", " ", `Task Name`) %>%
       sub("^.* to ", "", .)) %>%
   select(-`Task Name`)
-grind_and_pave$source_row_number <- as.integer(grind_and_pave$source_row_number)
+write_csv(grind_and_pave, path = "tidy_grind_and_pave.csv")
 ```
-### Pavement moratorium
+
+#### Pavement moratorium
 This one's easier - the only non-tidy feature is that some of the `Street` entries have a " Base-Repair" or similar tacked onto the end.
 
 ```{r}
@@ -94,12 +83,12 @@ pavement_moratorium <- Pavement_Moratorium %>%
     source_file_name, 
     source_row_number, 
     street, 
-    from = `From Street`,
-    to = `To Street`)
-pavement_moratorium$source_row_number <- as.integer(pavement_moratorium$source_row_number)
+    from_street = `From Street`,
+    to_street = `To Street`)
+write_csv(pavement_moratorium, path = "tidy_pavement_moratorium.csv")
 ```
 
-### Planned fog seal
+#### Planned fog seal
 ```{r}
 planned_fog_seal <- Planned_Fog_Seal %>%
   mutate(source_file_name = "Planned Fog Seal.csv") %>%
@@ -108,12 +97,12 @@ planned_fog_seal <- Planned_Fog_Seal %>%
     source_file_name, 
     source_row_number, 
     street = Street, 
-    from = `From Street`,
-    to = `To Street`)
-planned_fog_seal$source_row_number <- as.integer(planned_fog_seal$source_row_number)
+    from_street = `From Street`,
+    to_street = `To Street`)
+write_csv(planned_fog_seal, path = "tidy_planned_fog_seal.csv")
 ```
 
-### Planned paving
+#### Planned paving
 ```{r}
 planned_paving <- Planned_Paving %>%
   mutate(source_file_name = "Planned Paving.csv") %>%
@@ -122,24 +111,7 @@ planned_paving <- Planned_Paving %>%
     source_file_name, 
     source_row_number, 
     street = Street, 
-    from = `From Street`,
-    to = `To Street`)
-planned_paving$source_row_number <- as.integer(planned_paving$source_row_number)
-```
-
-## Collection for geocoding
-### Bind rows to one data frame
-```{r}
-geocoder_input <- bind_rows(grind_and_pave, pavement_moratorium, planned_fog_seal, planned_paving)
-```
-
-### Addresses, intersections and lines
-If you look at `geocoder_input`, you'll notice some entries have no `from` or `to` value, and some have a `from` but no `to`. They'll have different geocoding requirements. So we divide them into three data frames via `filter`.
-```{r}
-no_cross_streets <- geocoder_input %>% filter(is.na(from) & is.na(to))
-write_csv(no_cross_streets, path = "no_cross_streets.csv")
-from_only <- geocoder_input %>% filter(!is.na(from) & is.na(to))
-write_csv(from_only, path = "from_only.csv")
-both <- geocoder_input %>% filter(!is.na(from) & !is.na(to))
-write_csv(both, path = "both.csv")
+    from_street = `From Street`,
+    to_street = `To Street`)
+write_csv(planned_paving, path = "tidy_planned_paving.csv")
 ```
