@@ -117,13 +117,13 @@ planned_paving <- Planned_Paving %>%
 
 ## Combine the tidied files and ship them off to the PostGIS geocoder
 ```{r}
-if(!require(RPostgreSQL)) install.packages("RPostgreSQL")
-library(RPostgreSQL)
 tidy_geocoder_input <- bind_rows(
   grind_and_pave,
   pavement_moratorium,
   planned_fog_seal,
   planned_paving)
+tidy_geocoder_input$from_street[is.na(tidy_geocoder_input$from_street)] <- ""
+tidy_geocoder_input$to_street[is.na(tidy_geocoder_input$to_street)] <- ""
 write_csv(tidy_geocoder_input, path = "tidy_geocoder_input.csv")
 ```
 
