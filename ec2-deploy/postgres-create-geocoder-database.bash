@@ -13,6 +13,7 @@ echo "Creating the nation database population script"
 psql -d geocoder -f make-nation-script.psql
 chmod +x /gisdata/nation.bash
 sed -i -e "s;PGHOST=.*$;PGHOST=/var/run/postgresql;" /gisdata/nation.bash
+echo "Running the nation database population script"
 /gisdata/nation.bash
 
 echo ""
@@ -20,6 +21,7 @@ echo "Creating the states database population script"
 psql -d geocoder -f make-states-script.psql
 chmod +x /gisdata/states.bash
 sed -i -e "s;PGHOST=.*$;PGHOST=/var/run/postgresql;" /gisdata/states.bash
+echo "Running the states database population script"
 /gisdata/states.bash
 
 echo ""
