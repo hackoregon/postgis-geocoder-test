@@ -1,6 +1,12 @@
 #! /bin/bash
 
 echo "Adding PostgreSQL / PostGIS package repository"
+apt-get update && apt-get install -y \
+  git \
+  vim-nox \
+  curl \
+  wget \
+  && apt-get clean
 cp postgis.list /etc/apt/sources.list.d/
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc \
   | apt-key add -
@@ -9,10 +15,6 @@ echo "http://apt.postgresql.org/pub/repos/apt repository added!"
 echo ""
 echo "Installing PostGIS packages"
 apt-get install -y \
-  git \
-  vim-nox \
-  curl \
-  wget \
   postgresql-9.6 \
   postgresql-autodoc \
   postgresql-client-9.6 \
