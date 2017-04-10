@@ -5,8 +5,7 @@ apt-get update && apt-get install -y \
   git \
   vim-nox \
   curl \
-  wget \
-  && apt-get clean
+  wget
 cp postgis.list /etc/apt/sources.list.d/
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc \
   | apt-key add -
@@ -27,8 +26,7 @@ apt-get install -y \
   postgresql-9.6-postgis-scripts \
   postgresql-9.6-pgrouting \
   postgresql-9.6-pgrouting-doc \
-  postgresql-9.6-pgrouting-scripts \
-  && apt-get clean
+  postgresql-9.6-pgrouting-scripts
 
 echo ""
 echo "Creating the /gisdata workspace"
