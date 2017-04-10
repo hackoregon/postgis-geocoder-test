@@ -9,6 +9,10 @@ echo "http://apt.postgresql.org/pub/repos/apt repository added!"
 echo ""
 echo "Installing PostGIS packages"
 apt-get install -y \
+  git \
+  vim-nox \
+  curl \
+  wget \
   postgresql-9.6 \
   postgresql-autodoc \
   postgresql-client-9.6 \
