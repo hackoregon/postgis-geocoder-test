@@ -33,6 +33,10 @@ echo "Creating a dump of the geocoder database"
 pg_dump -Fc geocoder > /gisdata/geocoder.pgdump
 
 echo ""
+echo "Creating a zipfile of the TIGER/Line shapefiles"
+zip -9r /gisdata/shapefiles.zip /gisdata/www2.census.gov/
+
+echo ""
 echo "Testing the geocoder - compare lon and lat with Google Maps"
 psql -d geocoder -f test-geocoder.sql
 
