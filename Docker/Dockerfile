@@ -5,8 +5,8 @@ MAINTAINER M. Edward (Ed) Borasky <znmeb@znmeb.net>
 RUN apt-get update \
   && apt-get install -qqy --no-install-recommends \
   ca-certificates \
-  postgresql-9.6-postgis-2.3 \
-  postgresql-9.6-postgis-2.3-scripts \
+  postgresql-10-postgis-2.4 \
+  postgresql-10-postgis-2.4-scripts \
   wget \
   && apt-get clean
 
