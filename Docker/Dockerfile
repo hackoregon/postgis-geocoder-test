@@ -1,4 +1,4 @@
-FROM docker.io/postgres:9.6
+FROM docker.io/postgres:10
 MAINTAINER M. Edward (Ed) Borasky <znmeb@znmeb.net>
 
 # Install PostGIS and utilities
