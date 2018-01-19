@@ -2,9 +2,9 @@
 1. You will need:
     * Docker Community Edition (stable): Docker version 17.03.1-ce, build c6d412e or later,
     * docker-compose: docker-compose version 1.11.2, build dfed245 or later, and
-    * PostgreSQL 9.6 or greater on your host.
-    * Note: I am currently testing on an Ubuntu 16.04.2 LTS "Xenial Xerus" system. I will be testing on Windows 10 Pro / Docker for Windows.
-2. Edit the file `env-dockerservice`. Change the `PGPASSWORD` to a strong password of your choosing. Do not check the new password into version control!
+    * PostgreSQL 10 or greater on your host. This repository only uses `psql`, not the whole PostgreSQL package.
+    * Note: I am currently testing on an Arch Linux system. I will be testing on Windows 10 Pro / Docker for Windows.
+2. Edit the file `env-dockerservice`. Change the `PGPASSWORD` to a strong password of your choosing. ***Do not check the new password into version control!***
 3. Open a command prompt in this directory and type `docker-compose up --build`. It will take a while to restore the database. You can ignore errors and warnings.
 4. When the service is ready you'll see something like
 
