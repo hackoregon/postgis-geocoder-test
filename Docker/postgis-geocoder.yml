@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+    postgis-geocoder:
+        build:
+            context: .
+            dockerfile: postgis-geocoder.Dockerfile
+        environment:
+            - POSTGRES_PASSWORD=yourpasswordhere
+        image: docker.io/znmeb/postgis-geocoder
+        ports: 
+        - '5438:5432'
+        volumes:
+        - ./gisdata:/gisdata

@@ -1,6 +1,4 @@
-#! /bin/bash
-
 export PGHOST=localhost
-export PGPORT=5439
+export PGPORT=5438
 export PGUSER=postgres
 export PGPASSWORD=yourpasswordhere
