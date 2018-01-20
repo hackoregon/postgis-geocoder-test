@@ -12,7 +12,10 @@ then
   echo "The database load / dump creation will take off after that and will run for some time."
   sleep 30
   docker exec docker_postgis_1 /start-creation.bash
+else
+  echo "The database dump file already exists"
 fi
+cp gisdata/geocoder.pgdump .
 
 # create and start the PostGIS image with geocoder database
 echo "Building the Docker PostGIS geocoder image."
