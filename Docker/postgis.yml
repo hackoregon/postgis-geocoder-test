@@ -3,7 +3,7 @@ services:
     postgis:
         build:
             context: .
-            dockerfile: postgis_image.Dockerfile
+            dockerfile: postgis.Dockerfile
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
         image: docker.io/znmeb/postgis
