@@ -6,8 +6,10 @@ services:
             dockerfile: postgis.Dockerfile
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
+            - PGDATA=/var/lib/postgresql/data/pgdata
         image: docker.io/znmeb/postgis
         ports: 
         - '5439:5432'
         volumes:
         - /data/gisdata:/gisdata
+        - /data/pgdata:/var/lib/postgresql/data/pgdata

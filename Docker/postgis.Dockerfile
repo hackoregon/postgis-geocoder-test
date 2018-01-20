@@ -15,14 +15,5 @@ RUN apt-get update \
   wget \
   && apt-get clean
 
-# root script to start creation
-COPY start-creation.bash /
-RUN chmod +x /start-creation.bash
-
-# scripts that run as 'postgres'
-RUN mkdir -p /home/postgres/
-RUN usermod --shell /bin/bash postgres
-COPY *sql /home/postgres/
-COPY create-geocoder-database.bash /home/postgres/
-COPY test-geocoder.bash /home/postgres/
-RUN chown -R postgres:postgres /home/postgres/
+# 'postgres' home directory
+RUN usermod --shell /bin/bash --home /home/postgres --move-home postgres

@@ -6,6 +6,9 @@ services:
             dockerfile: postgis-geocoder.Dockerfile
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
+            - PGDATA=/var/lib/postgresql/data/pgdata
         image: docker.io/znmeb/postgis-geocoder
         ports: 
         - '5438:5432'
+        - /data/gisdata:/gisdata
+        - /data/pgdata:/var/lib/postgresql/data/pgdata
