@@ -4,18 +4,20 @@
 echo "Building the Docker PostGIS image."
 docker-compose -f postgis.yml up --build -d
 
-# assumes the PostGIS container is running on 'docker_postgis_1'
-# build the database and dump it - takes a while!
-if [ ! -e gisdata/geocoder.pgdump ]
+# assumes the PostGIS service is running on 'docker_postgis_1'
+# build the database and dump it if needed - takes a while!
+if [ ! -e /data/gisdata/geocoder.pgdump ]
 then
   echo "Sleeping 30 seconds to wait for PostGIS to start."
   echo "The database load / dump creation will take off after that and will run for some time."
   sleep 30
   docker exec docker_postgis_1 /start-creation.bash
 else
-  echo "The database dump file already exists"
+  echo "The database dump file already exists."
 fi
-cp gisdata/geocoder.pgdump .
+
+# copy it here since we've igno
+cp /data/gisdata/geocoder.pgdump .
 
 # create and start the PostGIS image with geocoder database
 echo "Building the Docker PostGIS geocoder image."

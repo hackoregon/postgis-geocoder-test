@@ -10,4 +10,4 @@ services:
         ports: 
         - '5439:5432'
         volumes:
-        - ./gisdata:/gisdata
+        - /data/gisdata:/gisdata
