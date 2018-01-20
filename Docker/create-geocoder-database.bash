@@ -1,5 +1,8 @@
 #! /bin/bash
 
+echo "Starting database service."
+pg_ctl start -D=$PGDATA
+
 export GEOCODER=`psql -lqt | cut -d \| -f 1 | grep -cw geocoder`
 echo "GEOCODER = $GEOCODER"
 if [ $GEOCODER -gt "0" ]
