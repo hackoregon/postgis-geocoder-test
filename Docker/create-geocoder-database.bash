@@ -1,5 +1,7 @@
 #! /bin/bash
 
+cd /home/postgres # just in case we got lost coming in
+
 echo "Creating a geocoder database"
 createdb -O postgres geocoder
 psql -d geocoder -f extensions.sql
