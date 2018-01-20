@@ -1,9 +1,13 @@
-version: '2.1'
+version: '3.4'
 services:
     postgis:
-        build: .
+        build:
+            context: .
+            dockerfile: postgis_image.Dockerfile
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
         image: docker.io/znmeb/postgis:build
         ports: 
         - '5439:5432'
+        volumes:
+        - ./gisdata:/gisdata
