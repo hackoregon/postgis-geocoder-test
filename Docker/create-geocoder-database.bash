@@ -6,13 +6,11 @@ echo "Creating a geocoder database"
 createdb -O postgres geocoder
 psql -d geocoder -f extensions.sql
 
-# make workspace
 echo "Creating the /gisdata workspace"
 mkdir -p /gisdata/temp
 chown -R ${USER}:${USER} /gisdata
 
-# execute script builder
-echo "Creating the database population scripts"
+echo "Populating the database - this will take some time."
 for i in nation oregon
 do
   psql -d geocoder -f make-$i-script.psql
