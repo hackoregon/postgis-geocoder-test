@@ -15,6 +15,11 @@ RUN apt-get update \
   wget \
   && apt-get clean
 
+# root script to start creation
+COPY start-creation.bash /
+RUN chmod +x /start-creation.bash
+
+# scripts that run as 'postgres'
 RUN mkdir -p /home/postgres/
 RUN usermod --shell /bin/bash postgres
 COPY *sql /home/postgres/
