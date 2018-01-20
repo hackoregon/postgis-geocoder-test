@@ -6,7 +6,7 @@ services:
             dockerfile: postgis_image.Dockerfile
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
-        image: docker.io/znmeb/postgis:build
+        image: docker.io/znmeb/postgis
         ports: 
         - '5439:5432'
         volumes:
