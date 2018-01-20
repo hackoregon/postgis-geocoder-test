@@ -1,5 +1,13 @@
 #! /bin/bash
 
+export GEOCODER=`psql -lqt | cut -d \| -f 1 | grep -cw geocoder`
+echo "GEOCODER = $GEOCODER"
+if [ $GEOCODER -gt "0" ]
+then
+  echo "geocoder database exists = exiting!"
+  exit
+fi
+
 cd /home/postgres # just in case we got lost coming in
 
 echo "Creating a geocoder database"
