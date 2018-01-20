@@ -26,4 +26,4 @@ docker-compose -f postgis.yml down
 cp /data/gisdata/geocoder.pgdump .
 
 echo "Bringing up the 'postgis-geocoder' service."
-docker-compose -f postgis-geocoder.yml up --build -d
+docker-compose -f postgis-geocoder.yml up --build
