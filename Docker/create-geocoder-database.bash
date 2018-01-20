@@ -16,7 +16,6 @@ do
   psql -d geocoder -f make-$i-script.psql
   pushd /gisdata
   sed -i -e '/PGHOST/d' $i.bash
-  vim $i.bash
   chmod +x $i.bash
   ./$i.bash
   popd

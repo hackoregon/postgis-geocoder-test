@@ -12,7 +12,6 @@ RUN apt-get update \
   postgresql-10-pgrouting \
   postgresql-10-pgrouting-scripts \
   unzip \
-  vim-nox \
   wget \
   && apt-get clean
 
