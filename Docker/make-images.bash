@@ -27,4 +27,3 @@ docker-compose -f postgis-geocoder.yml up --build -d
 echo "Sleeping 60 seconds to wait for service to start."
 sleep 60
 echo "Testing the geocoder - compare lon and lat with Google Maps."
-docker exec --user postgres docker_postgis-geocoder_1 "/usr/bin/psql -d geocoder -f /home/postgres/test-geocoder.sql"
