@@ -1,5 +1,8 @@
 #! /bin/bash
 
+echo "Bringing up the 'postgis' service."
+docker-compose -f postgis.yml up --build -d
+
 # build the database and dump it if needed - takes a while!
 if [ ! -e /data/gisdata/geocoder.pgdump ]
 then
@@ -7,8 +10,6 @@ then
   sudo rm -fr /data/gisdata
   sudo mkdir -p /data/gisdata
   sudo chown 999:999 /data/gisdata
-  echo "Building the 'postgis' image."
-  docker-compose -f postgis.yml up --build -d
   echo "Sleeping 30 seconds to wait for PostGIS to start."
   echo "The database load / dump creation will take off after that and will run for some time."
   sleep 30
@@ -17,9 +18,12 @@ else
   echo "The database dump file already exists."
 fi
 
+# we don't need the 'postgis' service any more
+echo "Bringing down the 'postgis' service."
+docker-compose -f postgis.yml down
+
 # copy dump here
 cp /data/gisdata/geocoder.pgdump .
 
-# create and start the postgis-geocoder image
-echo "Building the 'postgis-geocoder' image."
+echo "Bringing up the 'postgis-geocoder' service."
 docker-compose -f postgis-geocoder.yml up --build -d
