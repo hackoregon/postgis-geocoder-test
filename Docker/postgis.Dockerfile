@@ -24,4 +24,5 @@ RUN mkdir -p /home/postgres/
 RUN usermod --shell /bin/bash postgres
 COPY *sql /home/postgres/
 COPY create-geocoder-database.bash /home/postgres/
+COPY test-geocoder.bash /home/postgres/
 RUN chown -R postgres:postgres /home/postgres/
