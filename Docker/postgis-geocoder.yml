@@ -10,5 +10,6 @@ services:
         image: docker.io/znmeb/postgis-geocoder
         ports: 
         - '5438:5432'
+        volumes:
         - /data/gisdata:/gisdata
         - /data/pgdata:/var/lib/postgresql/data/pgdata
