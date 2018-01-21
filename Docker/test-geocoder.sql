@@ -13,5 +13,5 @@ SELECT
   rating
 FROM
   geocode_intersection(
-    'MLK', 'Couch', 'OR', 'Portland'
+    'Grand Ave', 'Couch St', 'OR', 'Portland'
   );
