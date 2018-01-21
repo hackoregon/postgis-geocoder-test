@@ -5,7 +5,7 @@ SELECT
   pprint_addy(addy) As paddress
 FROM
   geocode(
-    '317 NW Glisan St, Portland, OR 97209'
+    '329 NE Couch St, Portland, OR 97232'
   ) As g;
 SELECT
   pprint_addy(addy),
@@ -13,5 +13,5 @@ SELECT
   rating
 FROM
   geocode_intersection(
-    'Glisan', '3rd', 'OR', 'Portland'
+    'MLK', 'Couch', 'OR', 'Portland'
   );
