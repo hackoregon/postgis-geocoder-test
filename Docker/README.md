@@ -21,8 +21,10 @@
     2. `/data/pgdata` is mounted in the containers as `/var/lib/postgresql/data/pgdata`. This is where the containers keep their PostgreSQL data. This is also UID and GID 999. For the geocoders, this is easily recreated, either by re-running the scripts or by restoring `geocoder.pgdump` in `/data/gisdata`. But for other applications, you'll want to be careful not to corrupt it with host processes. `/data/pgdata` with just the Oregon goecoder database is currently about 2.7 GB.
 
 ### Buidling the database and the images
-1. Open a command prompt in this directory and type `./make-images.bash`. It will take a while to run; it is downloading shapefiles, unpacking them and inserting the contents into the database. You can ignore errors and warnings.
-2. When the data acquisition is complete you'll see something like
+1. Open a terminal in this directory.
+2. Set a password for the `postgres` database superuser. Type `export PGPASSWORD="yourpasswordgoeshere"`. 
+3. Open a command prompt in this directory and type `./make-images.bash`. It will take a while to run; it is downloading shapefiles, unpacking them and inserting the contents into the database. You can ignore errors and warnings.
+4. When the data acquisition is complete you'll see something like
 ```
 postgis-geocoder_1  | 2018-01-20 11:10:01.039 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
 postgis-geocoder_1  | 2018-01-20 11:10:01.039 UTC [1] LOG:  listening on IPv6 address "::", port 5432
@@ -31,14 +33,14 @@ postgis-geocoder_1  | 2018-01-20 11:10:01.103 UTC [68] LOG:  database system was
 postgis-geocoder_1  | 2018-01-20 11:10:01.118 UTC [1] LOG:  database system is ready to accept connections
 ```
 
-When those messages appear, type `CTRL-C` to stop the service.
+When those messages appear, type `CTRL-C` to stop the service. Then type `docker-compose -f postgis-geocoder.yml down` to remove the service.
     
 At this point you have
 
-1. `/data/gisdata/geocoder.pgdump` - the geocoder database,
+1. `/data/gisdata/geocoder.pgdump` - the geocoder database suitable for `pg_restore`,
 2. Downloaded shapefiles in `/data/gisdata/www2.census.gov/`,
 3. A PostgreSQL / PostGIS database in `/data/pgdata`,
-4. Two Docker images: `docker.io/znmeb/postgis` and `docker.io/znmeb/postgis-geocoder`. The first one is a vanila PostGIS image. It's built by installing the `PostGIS` and `pgRouting` packages in the official Docker PostgreSQL image from <https://hub.docker.com/r/_/postgres/>. Unless you're going to rebuild the database you should use this one.
+4. Two Docker images: `docker.io/znmeb/postgis` and `docker.io/znmeb/postgis-geocoder`. The first one is a vanilla PostGIS image. It's built by installing the `PostGIS` and `pgRouting` packages in the official Docker PostgreSQL image from <https://hub.docker.com/r/_/postgres/>. Unless you're going to rebuild the database you should use this one.
 
     The second is the image the scripts used to download the shapefiles and populate the database. Thus it has copies of all the scripts. Both are about 467 MB.
 
@@ -46,7 +48,7 @@ At this point you have
 To start the service, type `docker-compose up -d`. `docker-compose` will start the service and you'll see `Creating docker_postgis_1 ... done
 `
 
-You'll be able to connect as `postgres` on host `localhost` port `5439` with the password you set above. Note that the port is ***5439*** to avoid conflicts with your host PostgreSQL service.
+You'll be able to connect to PostGIS in the container as `postgres` on host `localhost` port `5439` with the password you set above. Note that the port is ***5439*** to avoid conflicts with your host PostgreSQL service, which usually listens on port 5432.
 
 Testing: type
 
