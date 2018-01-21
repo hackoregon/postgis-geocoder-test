@@ -2,7 +2,6 @@ version: '3.4'
 services:
     postgis:
         environment:
-            - POSTGRES_PASSWORD=yourpasswordhere
             - PGDATA=/var/lib/postgresql/data/pgdata
         image: docker.io/znmeb/postgis
         ports: 
