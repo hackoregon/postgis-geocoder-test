@@ -16,6 +16,7 @@ RUN chown -R postgres:postgres /home/postgres/
 RUN apt-get update \
   && apt-get install -qqy --no-install-recommends \
   apt-file \
+  man-db \
   mlocate \
   vim-nox \
   && apt-get clean
