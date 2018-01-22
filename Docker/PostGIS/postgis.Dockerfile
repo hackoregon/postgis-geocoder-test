@@ -16,4 +16,6 @@ RUN apt-get update \
   && apt-get clean
 
 # 'postgres' home directory
+RUN mkdir -p /home/postgres
 RUN usermod --shell /bin/bash --home /home/postgres --move-home postgres
+RUN chown -R postgres:postgres /home/postgres
