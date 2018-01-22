@@ -11,3 +11,13 @@ COPY *sql /home/postgres/
 COPY create-geocoder-database.bash /home/postgres/
 COPY test-geocoder.bash /home/postgres/
 RUN chown -R postgres:postgres /home/postgres/
+
+# command line / development conveniences
+RUN apt-get update \
+  && apt-get install -qqy --no-install-recommends \
+  apt-file \
+  mlocate \
+  vim-nox \
+  && apt-get clean
+RUN apt-file update
+RUN updatedb
