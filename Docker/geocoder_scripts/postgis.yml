@@ -2,8 +2,8 @@ version: '3.4'
 services:
     postgis:
         build:
-            context: .
-            dockerfile: PostGIS/postgis.Dockerfile
+            context: ../docker_hub_build
+            dockerfile: Dockerfile
         environment:
             - POSTGRES_PASSWORD=$PGPASSWORD
             - PGDATA=/var/lib/postgresql/data/pgdata

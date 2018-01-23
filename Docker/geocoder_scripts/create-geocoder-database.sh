@@ -1,8 +1,12 @@
 #! /bin/bash
 
+echo "Changing to 'postgres' home directory."
+cd /home/postgres
+
 echo "Starting database service."
 pg_ctl start -D=$PGDATA
 
+echo "Testing for existing geocoder database"
 export GEOCODER=`psql -lqt | cut -d \| -f 1 | grep -cw geocoder`
 echo "GEOCODER = $GEOCODER"
 if [ $GEOCODER -gt "0" ]
@@ -10,8 +14,6 @@ then
   echo "geocoder database exists = exiting!"
   exit
 fi
-
-cd /home/postgres # just in case we got lost coming in
 
 echo "Creating a geocoder database"
 createdb -O postgres geocoder
