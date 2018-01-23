@@ -1,10 +1,10 @@
 #! /bin/bash
 
-echo "Changing to 'postgres' home directory."
-cd /home/postgres
-
 echo "Starting database service."
 pg_ctl start -D=$PGDATA
+
+echo "Changing to 'postgres' home directory."
+cd /home/postgres
 
 echo "Testing for existing geocoder database"
 export GEOCODER=`psql -lqt | cut -d \| -f 1 | grep -cw geocoder`
