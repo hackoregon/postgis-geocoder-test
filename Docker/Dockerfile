@@ -3,7 +3,7 @@ MAINTAINER M. Edward (Ed) Borasky <znmeb@znmeb.net>
 
 # copy in startup script
 RUN mkdir -p /docker-entrypoint-initdb.d/
-COPY create-geocoder-database.sh /docker-entrypoint-initdb.d/
+COPY geocoder_scripts/create-geocoder-database.sh /docker-entrypoint-initdb.d/
 RUN chmod +x /docker-entrypoint-initdb.d/*sh
 
 # copy in scripts that run as 'postgres'
