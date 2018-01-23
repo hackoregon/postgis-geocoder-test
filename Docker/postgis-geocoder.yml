@@ -3,7 +3,7 @@ services:
     postgis-geocoder:
         build:
             context: .
-            dockerfile: postgis-geocoder.Dockerfile
+            dockerfile: Dockerfile
         environment:
             - POSTGRES_PASSWORD=$PGPASSWORD
             - PGDATA=/var/lib/postgresql/data/pgdata
