@@ -21,8 +21,8 @@
     2. `/data/pgdata` is mounted in the containers as `/var/lib/postgresql/data/pgdata`. This is where the containers keep their PostgreSQL data. This is also UID and GID 999. For the geocoders, this is easily recreated, either by re-running the scripts or by restoring `geocoder.pgdump` in `/data/gisdata`. But for other applications, you'll want to be careful not to corrupt it with host processes. `/data/pgdata` with just the Oregon geocoder database is currently about 2.7 GB.
 
 ### Buidling the database and the images
-1. Clone this repository and `cd` into it.
-2. Open a terminal.
+1. Clone this repository.
+2. Open a terminal and type `cd postgis-geocoder-test/Docker`.
 3. Set a password for the `postgres` database superuser. Type `export PGPASSWORD="yourpasswordgoeshere"`. 
 4. Open a command prompt in this directory and type `./make-images.bash`. It will take a while to run; it is downloading shapefiles, unpacking them and inserting the contents into the database. You can ignore errors and warnings.
 5. When the data acquisition is complete you'll see something like
